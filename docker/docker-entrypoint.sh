@@ -9,7 +9,7 @@ fi
 echo -e "\n========================1. 更新源代码========================\n"
 [ ! -d ${JD_DIR}/log ] && mkdir -p ${JD_DIR}/log
 crond
-bash git_pull
+bash git_pull.sh
 echo
 
 echo -e "========================2. 检测配置文件========================\n"
