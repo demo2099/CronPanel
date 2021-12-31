@@ -5,7 +5,7 @@
 # This is free software, licensed under the GNU General Public License v3.
 # See /LICENSE for more information.
 #
-DockerImage="lan-tianxiang/jd_shell:v3"
+DockerImage="cronpanel"
 WorkDir="${ShellDir}/jd-docker-workdir"
 ShellName=$0
 
@@ -59,7 +59,7 @@ if [ $NewImage = true ]; then
     if [ $GetImageType = "Local" ]; then
         rm -fr $WorkDir
         mkdir -p $WorkDir
-        wget -q https://github.com/lan-tianxiang/jd_shell/raw/v3/docker/Dockerfile -O $WorkDir/Dockerfile
+        #wget -q https://github.com/lan-tianxiang/jd_shell/raw/v3/docker/Dockerfile -O $WorkDir/Dockerfile
         docker build -t $DockerImage $WorkDir > $LogDir/NewImage.log
         rm -fr $WorkDir
     else
