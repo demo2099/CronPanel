@@ -6,7 +6,7 @@ services:
     container_name: cronpanel
     restart: always
     tty: true
-    network_mode: "host"
+    network_mode: "bridge"
     hostname: jd1
     volumes:
       - ./jd1/config:/jd/config
