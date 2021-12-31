@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 LABEL maintainer="Evine Deng <evinedeng@foxmail.com>"
 ARG JD_BASE_URL=https://github.com/demo2099/CronPanel.git
-ARG JD_BASE_BRANCH=master
+ARG JD_BASE_BRANCH=main
 ARG JD_SCRIPTS_URL=https://github.com/demo2099/jd_jscripts.git
 ARG JD_SCRIPTS_BRANCH=master
 ARG JD_SCRIPTS2_URL=https://github.com/lan-tianxiang/jd_scripts
