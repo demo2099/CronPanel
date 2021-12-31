@@ -54,7 +54,9 @@ Choose_GetImageType
 if [ $NewImage = true ]; then
     log "\n正在获取新镜像..."
     if [ $HasImage = true ]; then
+        docker rm -f $(docker ps -a | grep $DockerImage | awk '{print $1}')
         docker image rm -f $DockerImage
+        log "\n删除容器和镜像成功"
     fi
     if [ $GetImageType = "Local" ]; then
         rm -fr $WorkDir
