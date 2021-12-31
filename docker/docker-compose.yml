@@ -6,14 +6,14 @@ services:
     container_name: cronpanel
     restart: always
     tty: true
-    network_mode: "bridge"
+    network_mode: "host"
     hostname: jd1
     volumes:
       - ./jd1/config:/jd/config
       - ./jd1/log:/jd/log
       - ./jd1/scripts:/jd/scripts    # 如果想要看到lxk0301大佬的js脚本，以方便的添加额外脚本，可以解除本行注释，下同
     ports:
-      - 5678:5678
+      - 5800:5678
     environment: 
       - ENABLE_HANGUP=true            # 是否在启动容器时自动启动挂机程序
       - ENABLE_WEB_PANEL=true         # 是否在启动容器时自动启动控制面板
